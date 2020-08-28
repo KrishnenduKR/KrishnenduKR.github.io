@@ -1,0 +1,34 @@
+<mat-sidenav-container class="navcontainer">
+  <mat-sidenav mode="side" opened>
+    <div mat-card-avatar  class="header-image"></div>
+    <div class="title">
+      <mat-card-title>Krishnendu K R</mat-card-title>
+    </div>
+    <div  class="title">
+      <mat-card-subtitle>Software Engineer</mat-card-subtitle>
+    </div>
+    <div  class="navlist">
+      <mat-nav-list>
+
+        <a mat-list-item [routerLink]="['home']"> Home </a>
+        <a mat-list-item [routerLink]="['about-me']"> About Me </a>
+        <a mat-list-item [routerLink]="['resume']"> Resume </a>
+        <a mat-list-item [routerLink]="['portfolio']"> Portfolio </a>
+        <a mat-list-item [routerLink]="['blog']"> Blogs </a>
+        <a mat-list-item [routerLink]="['contact']"> Contact </a>
+  
+      </mat-nav-list>
+    </div>
+    <div class="icons">
+      <fa-icon [icon]="faTwitter"></fa-icon>
+      <fa-icon [icon]="faLinkedin"></fa-icon>
+      <fa-icon [icon]="faGithub"></fa-icon>
+    </div>
+    
+  </mat-sidenav>
+  <mat-sidenav-content>
+   
+      <router-outlet></router-outlet>
+   
+  </mat-sidenav-content>
+<mat-sidenav-container>
