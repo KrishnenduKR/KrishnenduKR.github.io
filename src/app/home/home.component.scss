@@ -1,3 +1,4 @@
+
 .homepage{
     height: 100%;
     width: 100%;
@@ -9,4 +10,29 @@
 .homecard{
     height: inherit;
     width: auto;
+}
+
+.content{
+    text-align: center;
+    color: white;
+    padding: 25% 0;
+    
+}
+
+.name{
+    font-size: 60px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.job{
+    font-size: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.address{
+    font-size: 18px;
 }
