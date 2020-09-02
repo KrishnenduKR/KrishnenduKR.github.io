@@ -1,5 +1,5 @@
 <mat-sidenav-container class="navcontainer">
-  <mat-sidenav mode="side" opened>
+  <mat-sidenav #sidenav mode="side" opened>
     <div mat-card-avatar  class="header-image"></div>
     <div class="title">
       <mat-card-title>Krishnendu K R</mat-card-title>
@@ -9,14 +9,7 @@
     </div>
     <div  class="navlist">
       <mat-nav-list>
-
-        <a mat-list-item [routerLink]="['home']" routerLinkActive="active"> Home </a>
-        <a mat-list-item [routerLink]="['about-me']" routerLinkActive="active"> About Me </a>
-        <a mat-list-item [routerLink]="['resume']" routerLinkActive="active"> Resume </a>
-        <a mat-list-item [routerLink]="['portfolio']" routerLinkActive="active"> Portfolio </a>
-        <a mat-list-item [routerLink]="['blog']" routerLinkActive="active"> Blogs </a>
-        <a mat-list-item [routerLink]="['contact']" routerLinkActive="active"> Contact </a>
-  
+        <a mat-list-item *ngFor="let item of navlist" (click)="handleClick(item)" [routerLink]="item.link">{{item.linkTitle}}</a>
       </mat-nav-list>
     </div>
     <div class="icons">
@@ -27,8 +20,7 @@
     
   </mat-sidenav>
   <mat-sidenav-content>
-   
-      <router-outlet></router-outlet>
-   
+    <app-header (sidenavToggle)="sidenav.toggle()" [title]=selectedItem  routerLinkActive="active"></app-header>
+    <router-outlet></router-outlet>
   </mat-sidenav-content>
 <mat-sidenav-container>

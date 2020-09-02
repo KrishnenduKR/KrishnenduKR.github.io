@@ -1,7 +1,8 @@
 mat-sidenav{
     width: 300px;
     padding: 20px;
-    // background-color: #5c4427;
+    // background-color: rgb(47, 48, 48);
+    // text-decoration-color: cornsilk;
 }
 
 fa-icon{
@@ -9,7 +10,7 @@ fa-icon{
 }
 
 mat-nav-list a.active {
-    background-color: burlywood;
+    background-color: grey;
 }
 
 .title{
