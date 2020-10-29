@@ -1,18 +1,30 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectorRef, OnDestroy } from '@angular/core';
 import { faCoffee} from '@fortawesome/free-solid-svg-icons';
 import { faTwitter, faLinkedin, faGithub} from '@fortawesome/free-brands-svg-icons';
-import { Router} from '@angular/router'; 
+import { Router, ActivatedRoute} from '@angular/router';
+import { MediaMatcher } from '@angular/cdk/layout'; 
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnDestroy {
+  mobileQuery: MediaQueryList;
 
-  constructor (
-    router: Router){
+  private _mobileQueryListener: () => void;
 
+  constructor (router: Router, changeDetectorRef: ChangeDetectorRef, media: MediaMatcher, route: ActivatedRoute){
+    this.mobileQuery = media.matchMedia('(max-width: 600px)');
+    this._mobileQueryListener = () => changeDetectorRef.detectChanges();
+    this.mobileQuery.addListener(this._mobileQueryListener);
+    route.url.subscribe(() => {
+      console.log(router.url);
+     });
+  }
+
+  ngOnDestroy(): void {
+    this.mobileQuery.removeListener(this._mobileQueryListener);
   }
 
   selectedItem:any;

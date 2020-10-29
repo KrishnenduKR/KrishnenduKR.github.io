@@ -1,6 +1,6 @@
 <mat-sidenav-container class="navcontainer">
-  <mat-sidenav #sidenav mode="side" opened>
-    <div mat-card-avatar  class="header-image"></div>
+  <mat-sidenav #sidenav [mode]="mobileQuery.matches ? 'over' : 'side'" class="d-sm-block">
+    <div mat-card-avatar  class="header-image d-none d-sm-block"></div>
     <div class="title">
       <mat-card-title>Krishnendu K R</mat-card-title>
     </div>

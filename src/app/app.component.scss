@@ -1,9 +1,16 @@
+@import '../styles-variables';
 mat-sidenav{
     width: 300px;
     padding: 20px;
     // background-color: rgb(47, 48, 48);
     // text-decoration-color: cornsilk;
 }
+
+@media (max-width: map-get($grid-breakpoints, sm)) {
+    mat-sidenav {
+      width: 150px;
+    }
+  }
 
 fa-icon{
     padding-right: 15px;
