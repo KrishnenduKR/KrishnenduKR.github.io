@@ -1,5 +1,5 @@
 <mat-sidenav-container class="navcontainer">
-  <mat-sidenav #sidenav opened [mode]="mobileQuery.matches ? 'over' : 'side'" class="d-sm-block">
+  <mat-sidenav #sidenav [opened]="mobileQuery.matches ? 'false' : 'true'" [mode]="mobileQuery.matches ? 'over' : 'side'" class="d-sm-block">
     <button mat-icon-button class="closenav d-sm-none" (click)="sidenav.close()"><mat-icon>close</mat-icon></button>
     <div mat-card-avatar  class="header-image"></div>
     <div class="title">
@@ -10,7 +10,7 @@
     </div>
     <div  class="navlist">
       <mat-nav-list>
-        <a mat-list-item class="navtext" *ngFor="let item of navlist" (click)="handleClick(item)" [routerLink]="item.link"><span matLine>{{item.linkTitle}}</span></a>
+        <a mat-list-item class="navtext" *ngFor="let item of navlist" (click)="handleClick(item,sidenav)" [routerLink]="item.link"><span matLine>{{item.linkTitle}}</span></a>
       </mat-nav-list>
     </div>
     <div class="icons">

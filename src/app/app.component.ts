@@ -44,12 +44,16 @@ export class AppComponent implements OnDestroy {
     { linkTitle: 'Contact', link: 'contact' }
   ];
 
-  handleClick(selectedItem) {
+  handleClick(selectedItem,sidenav) {
     if(selectedItem.linkTitle == 'Home'){
       this.selectedItem = "";
     }else
     {
       this.selectedItem = selectedItem.linkTitle;
+    }
+
+    if(this.mobileQuery.matches) {
+      sidenav.toggle()
     }
     
   } 
