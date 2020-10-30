@@ -39,7 +39,7 @@ export class AppComponent implements OnDestroy {
     { linkTitle: 'Home', link: 'home' },
     { linkTitle: 'About Me', link: 'about-me' },
     { linkTitle: 'Resume', link: 'resume' },
-    { linkTitle: 'Portfolio', link: 'portfolio' },
+    //{ linkTitle: 'Portfolio', link: 'portfolio' },
     { linkTitle: 'Blogs', link: 'blog' },
     { linkTitle: 'Contact', link: 'contact' }
   ];

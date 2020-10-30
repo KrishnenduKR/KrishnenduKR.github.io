@@ -22,6 +22,7 @@ import { BolgComponent } from './bolg/bolg.component';
 import { ContactComponent } from './contact/contact.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { MatInputModule } from '@angular/material/input';
     CommonModule,
     MatProgressBarModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

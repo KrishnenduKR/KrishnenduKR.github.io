@@ -2,13 +2,12 @@
 mat-sidenav{
     width: 300px;
     padding: 20px;
-    // background-color: rgb(47, 48, 48);
-    // text-decoration-color: cornsilk;
 }
 
-@media (max-width: map-get($grid-breakpoints, sm)) {
+@media (max-width: 576px) {
     mat-sidenav {
-      width: 150px;
+      width: 200px;
+      padding: 10px;
     }
   }
 
@@ -27,6 +26,7 @@ mat-nav-list a.active {
 
 .navlist{
     padding-top: 30px;
+    text-align: center;
 }
 
 .icons{
@@ -46,4 +46,24 @@ mat-nav-list a.active {
     margin: auto;
     background-image: url('/assets/krish2.jpg');
     background-size: cover;
+}
+
+@media (max-width:576px){
+    .header-image{
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        text-align: center;
+        margin: auto;
+        background-image: url('/assets/krish2.jpg');
+        background-size: cover;
+    }
+}
+
+.navtext{
+    text-align: center;
+}
+
+.closenav{
+    float: right;
 }

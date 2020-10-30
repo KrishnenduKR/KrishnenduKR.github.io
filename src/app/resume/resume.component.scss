@@ -36,3 +36,38 @@
   .container{
      padding-top: 40px;
   }
+
+  .skill-container{
+    background-color: transparent;
+    border: 2px solid #a878ff;
+    border-radius: 8px;
+    box-sizing: border-box;
+    height: 14px;
+    margin-bottom: 12px;
+    width: 100%;
+  }
+
+  .skill-percentage{
+    background-color: #a878ff;
+    border: 2px solid #fff;
+    border-radius: 9px;
+    height: 10px;
+    padding: 0;
+  }
+
+  .skill-percentage.skill1{
+     width:80%;
+  }
+  .skill-percentage.skill3{
+   width:60%;
+ }
+ .skill-percentage.skill4{
+   width:75%;
+ }
+ .skill-percentage.skill5{
+   width:70%;
+ }
+
+ li{
+    padding-left: 20px;
+ }
